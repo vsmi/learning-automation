@@ -1,0 +1,4 @@
+.pytest_cache
+learning-automation
+__pycache__/
+.idea/
