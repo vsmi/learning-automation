@@ -2,6 +2,7 @@ from pages.BaseApp import BasePage
 from locators import Locators
 
 
+
 class MainPage(BasePage):
     '''
     ищет элемент строки поиска,
@@ -19,9 +20,6 @@ class MainPage(BasePage):
     def click_on_the_search_button(self):
         return self.find_element(Locators.SEARCH_BTN, time=2).click()
 
-    '''
- 
-    '''
     def check_search_result(self):
         all_list = self.find_elements(Locators.PRODUCTS_LIST, time=2)
         search_result = [x.text for x in all_list if len(x.text) > 0]
