@@ -14,4 +14,10 @@ class Locators:
     LEFT = (By.CLASS_NAME, "LeftAside")
     MAIN_CONTENT = (By.CLASS_NAME, "MainContent")
     STUB = "stub"
+    ADD_PRODUCT_TO_BASKET = (By.CSS_SELECTOR, ".PIToPutInABasket [data-product_id='790']")
+    BASKET_ON_MAIN_PAGE = (By.CSS_SELECTOR, "[id='HBasket']")
+    BASKET_INFO = (By.CSS_SELECTOR, "#HBasket span")
+    CONFIRMATION_ADDING_TO_BASKET = (By.ID, "ConfirmationOnAdditionOfGoodsInBasket")
+    CLOSE_ON_CONFIRMATION_WINDOW = (By.CLASS_NAME, "CommonWCloseBtn")
+
 

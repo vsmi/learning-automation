@@ -50,4 +50,17 @@ class MainPage(BasePage):
     def check_main_content(self):
         return self.find_element(Locators.MAIN_CONTENT)
 
+    def check_basket_info(self):
+        element = self.find_element(Locators.BASKET_INFO)
+        return element.text
+
+    def click_add_to_basket(self):
+        return self.find_element(Locators.ADD_PRODUCT_TO_BASKET).click()
+
+    def check_confirmation_window(self):
+        return self.find_element(Locators.CONFIRMATION_ADDING_TO_BASKET)
+
+    def close_confirmation_window(self):
+        return self.find_element(Locators.CLOSE_ON_CONFIRMATION_WINDOW).click()
+
 
