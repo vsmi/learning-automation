@@ -19,5 +19,10 @@ class Locators:
     BASKET_INFO = (By.CSS_SELECTOR, "#HBasket span")
     CONFIRMATION_ADDING_TO_BASKET = (By.ID, "ConfirmationOnAdditionOfGoodsInBasket")
     CLOSE_ON_CONFIRMATION_WINDOW = (By.CLASS_NAME, "CommonWCloseBtn")
+    COUNTER = (By.CSS_SELECTOR, ".Amount .InputMask_Int")
+    TO_INCREASE_COUNT = (By.CLASS_NAME, "ToIncreaseCount")
+    PRICE_AND_COUNT = (By.CLASS_NAME, "PriceAndCount")
+
+
 
 

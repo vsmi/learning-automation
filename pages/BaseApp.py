@@ -27,3 +27,11 @@ class BasePage:
     '''
     def go_to_site(self):
         return self.driver.get(self.base_url)
+
+
+    '''
+    Переключается на окно подтверждения отправки товара в корзину
+    '''
+    def switch_to_confirmation_window(self, locator):
+        return self.driver.switch_to.window(self.locator)
+
