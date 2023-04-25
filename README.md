@@ -1,2 +1,9 @@
-# learnig-automation
-## It is my repo for automation tasks.
+# learning-automation
+>## Изучаю автоматизацию тестирования:
+>
+>- Selenium WebDriver
+>- PageObject pattern
+> 
+>Этот репозиторий содержит ui тесты для онлайн магазина 
+> 
+

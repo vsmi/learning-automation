@@ -30,7 +30,7 @@ class BasePage:
 
 
     '''
-    Переключается на окно подтверждения отправки товара в корзину
+    Переключается на окно 
     '''
     def switch_to_confirmation_window(self, locator):
         return self.driver.switch_to.window(self.locator)
