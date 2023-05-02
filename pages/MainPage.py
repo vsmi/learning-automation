@@ -3,19 +3,19 @@ from locators import MainPageLocators, ConfirmationWindowLocators
 
 
 class MainPage(BasePage):
-    """
-    ищет элемент строки поиска, кликает и вводит в поиск необходимое слово
-    """
     def enter_word(self, word):
+        """
+        ищет элемент строки поиска, кликает и вводит в поиск необходимое слово
+        """
         search_field = self.find_element(MainPageLocators.SEARCH_FIELD)
         search_field.click()
         search_field.send_keys(word)
         return search_field
 
-    """
-    ищет элемент кнопки поиска и кликает на неё
-    """
     def click_on_the_search_button(self):
+        """
+        ищет элемент кнопки поиска и кликает на неё
+        """
         return self.find_element(MainPageLocators.SEARCH_BTN, time=2).click()
 
     def check_search_result(self):
@@ -56,4 +56,3 @@ class MainPage(BasePage):
 
     def click_add_to_basket(self):
         return self.find_element(MainPageLocators.ADD_PRODUCT_TO_BASKET).click()
-

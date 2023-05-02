@@ -8,30 +8,28 @@ class BasePage:
         self.driver = driver
         self.base_url = "https://obninsk-kolyaski.ru/"
 
-    '''
-    Ищет элемент и возвращает его
-    '''
     def find_element(self, locator, time=10):
-        return WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),\
+        """
+        Ищет элемент и возвращает его
+        """
+        return WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator), \
                                                       message=f"Can't find element by locator {locator}")
 
-    '''
-    Ищет элементы и возвращает их в виде списка
-    '''
     def find_elements(self, locator, time=10):
-        return WebDriverWait(self.driver, time).until(EC.presence_of_all_elements_located(locator),\
+        """
+        Ищет элементы и возвращает их в виде списка
+        """
+        return WebDriverWait(self.driver, time).until(EC.presence_of_all_elements_located(locator), \
                                                       message=f"Can't find elements by locator {locator}")
 
-    '''
-    Вызывает функцию get из webdriver, переходит на указанную страницу
-    '''
     def go_to_site(self):
+        """
+        Вызывает функцию get из webdriver, переходит на указанную страницу
+        """
         return self.driver.get(self.base_url)
 
-
-    '''
-    Переключается на окно 
-    '''
     def switch_to_confirmation_window(self, locator):
+        """
+        Переключается на окно
+        """
         return self.driver.switch_to.window(self.locator)
-

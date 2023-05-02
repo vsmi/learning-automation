@@ -7,7 +7,7 @@ class ConfirmationWindow(BasePage):
         return self.find_element(ConfirmationWindowLocators.CONFIRMATION_ADDING_TO_BASKET)
 
     def close_confirmation_window(self):
-        return self.find_element(ConfirmationWindowLocators.CLOSE_ON_CONFIRMATION_WINDOW).click()
+        return self.find_element(ConfirmationWindowLocators.CLOSE_CONFIRMATION_WINDOW).click()
 
     def to_increase_count(self):
         self.find_element(ConfirmationWindowLocators.TO_INCREASE_COUNT).click()
@@ -16,3 +16,6 @@ class ConfirmationWindow(BasePage):
         counter = self.find_element(ConfirmationWindowLocators.COUNTER)
         value = counter.get_attribute("value")
         return value
+
+    def go_to_basket(self):
+        self.find_element(ConfirmationWindowLocators.TO_BASKET).click()

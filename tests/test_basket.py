@@ -1,5 +1,6 @@
 from pages.MainPage import MainPage
 from pages.ConfirmationWindow import ConfirmationWindow
+from pages.Basket import Basket
 
 
 class TestBasket:
@@ -21,3 +22,17 @@ class TestBasket:
         cw.close_confirmation_window()
         info = main_page.check_basket_info()
         assert info != 'пуста'
+
+    def test_basket_is_opened(self, browser):
+        main_page = MainPage(browser)
+        cw = ConfirmationWindow(browser)
+        bs = Basket(browser)
+        main_page.go_to_site()
+        main_page.go_to_search_field()
+        main_page.enter_word('автокресло')
+        main_page.click_on_the_search_button()
+        main_page.click_add_to_basket()
+        cw.check_confirmation_window()
+        cw.go_to_basket()
+        bs.check_basket()
+        assert bs
