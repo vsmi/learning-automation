@@ -1,3 +1,7 @@
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from pages.MainPage import MainPage
 import pytest
 
@@ -46,3 +50,21 @@ class TestMainPage:
         main_page.go_to_site()
         main_content = main_page.check_main_content()
         assert main_content, "there is no main content"
+
+
+class TestF:
+    def test_main_menu_clickable(self, browser):
+        main_page = MainPage(browser)
+        main_page.go_to_site()
+        main_menu_items = len(main_page.find_main_menu_items())
+        f = True
+        for i in range(main_menu_items):
+            try:
+                menu_item = main_page.find_main_menu_items()[i]
+                menu_item.click()
+                main_page.go_to_previous_page()
+                main_menu_items = main_page.find_main_menu_items()
+            except Exception:
+                f = False
+        assert f
+

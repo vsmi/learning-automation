@@ -16,6 +16,10 @@ class MainPageLocators:
     ADD_PRODUCT_TO_BASKET = (By.CSS_SELECTOR, ".PIToPutInABasket [data-product_id='790']")
     BASKET_ON_MAIN_PAGE = (By.CSS_SELECTOR, "[id='HBasket']")
     BASKET_INFO = (By.CSS_SELECTOR, "#HBasket span")
+    MM_ITEM = (By.CSS_SELECTOR, ".MMItems.FlexBox.FlexBox_CenterAlignment")
+    MM_ITEMS = (By.XPATH, "//div[@class='MMItems FlexBox FlexBox_CenterAlignment']/div")
+    ONECLICK = (By.CLASS_NAME, "PIPurchaseOneClick")
+    ONECLICKW = (By.CLASS_NAME, "CommonWData")
 
 
 class ConfirmationWindowLocators:
@@ -29,6 +33,13 @@ class ConfirmationWindowLocators:
 
 class BasketLocators:
     BASKET = (By.ID, "BasketCart")
+
+
+class OneClickLocators:
+    NAME = (By.ID, "fname47")
+    EMAIL = (By.ID, "email49")
+    PHONE = (By.ID, "phone50")
+    SUBMIT = (By.CSS_SELECTOR, "[title='Подтвердить оформление заказа']")
 
 
 

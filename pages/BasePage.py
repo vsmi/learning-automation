@@ -7,6 +7,7 @@ class BasePage:
     def __init__(self, driver):
         self.driver = driver
         self.base_url = "https://obninsk-kolyaski.ru/"
+        self.main_window = driver.current_window_handle
 
     def find_element(self, locator, time=10):
         """
@@ -33,3 +34,13 @@ class BasePage:
         Переключается на окно
         """
         return self.driver.switch_to.window(self.locator)
+
+    def go_to_back(self):
+        self.driver.back()
+
+    def get_attribute_of_elem(self, elem):
+        return elem.get_attribute('class')
+
+
+
+

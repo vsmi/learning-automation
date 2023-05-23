@@ -1,4 +1,4 @@
-from pages.BaseApp import BasePage
+from pages.BasePage import BasePage
 from locators import MainPageLocators, ConfirmationWindowLocators
 
 
